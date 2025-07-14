@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h2 class="welcome-text">Welcome to My Portfolio</h2>
+      <img src="profile.jpg" alt="Profile Photo" class="profile-img" />
+      <h1>I'm Chandrasekar</h1>
+      <p class="headline">Web Developer | Frontend Enthusiast | Creative Coder</p>
+      <button onclick="showAbout()">About Me</button>
+    </div>
+  </header>
+
+  <section id="about" class="section hidden">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate web developer with experience in building responsive websites
+      using HTML, CSS, JavaScript, and modern frameworks. I have a background in Computer Science and love creating interactive web experiences.
+    </p>
+    <p>
+      I thrive in collaborative environments and love solving real-world problems with clean, efficient code.
+      I'm also constantly learning new technologies like React.js, Git, and APIs to improve my skill set.
+    </p>
+
+    <div class="info-boxes">
+      <div class="info-box">
+        <h4>🎓 Education</h4>
+        <p>B.Tech in Computer Science</p>
+      </div>
+      <div class="info-box">
+        <h4>💼 Experience</h4>
+        <p>2+ years in front-end development</p>
+      </div>
+      <div class="info-box">
+        <h4>🛠 Specialties</h4>
+        <p>UI/UX, React, Vanilla JS, Responsive Design</p>
+      </div>
+      <div class="info-box">
+        <h4>🎯 Interests</h4>
+        <p>Design Systems, Open Source, Blogging</p>
+      </div>
+      <div class="info-box">
+        <h4>🧰 Tools</h4>
+        <p>VS Code, GitHub, Chrome DevTools, Figma</p>
+      </div>
+    </div>
+
+    <button onclick="goToProjects()">Learn More</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Gowtham. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goToProjects() {
+      window.location.href = "projects.html";
+    }
+
+    function showAbout() {
+      const aboutSection = document.getElementById("about");
+      aboutSection.classList.remove("hidden");
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
